@@ -1,5 +1,6 @@
 package com.example.farmdiary
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -24,27 +25,28 @@ import com.example.farmdiary.farmDiary.presentation.screen.TopAppBarWithBackButt
 import com.example.farmdiary.ui.theme.FarmDiaryTheme
 
 class MainActivity : ComponentActivity() {
+    @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             val navController = rememberNavController()
             FarmDiaryTheme {
-                Scaffold (
-                    bottomBar = {
-                        BottomBar(navController = navController)
-                    },
-                    topBar = {
-                        TopBar(navController = navController)
-                    },
-                    floatingActionButton = {
-                        FloatingButton()
-                    },
-                    floatingActionButtonPosition = FabPosition.Center
-                ) { innerPadding ->
-                    Nav(navController)
-
-                }
+                Nav(navController = navController)
+//                Scaffold (
+//                    bottomBar = {
+//                        BottomBar(navController = navController)
+//                    },
+//                    topBar = {
+//                        TopBar(navController = navController)
+//                    },
+//                    floatingActionButton = {
+//                        FloatingButton()
+//                    },
+//                    floatingActionButtonPosition = FabPosition.Center
+//                ) {
+//                    Nav(navController = navController)
+//                }
             }
         }
     }

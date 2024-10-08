@@ -260,8 +260,6 @@ fun BottomBar(
                     .offset(x = animatedPosition)
                     .size(width = itemWidth - 10.dp, height = 4.dp) // Width depends on item size
                     .background(color = color, RoundedCornerShape(2.dp))
-
-//                    .align(Alignment.Top)
             )
 
             Spacer(modifier = Modifier.height(10.dp))
@@ -360,7 +358,6 @@ fun TextAndNotification(){
                     .clip(shape = CircleShape)
                     .padding(2.dp),
                 contentAlignment = Alignment.Center
-
             ) {
                 BadgedBox(
                     badge = {
@@ -378,12 +375,11 @@ fun TextAndNotification(){
                     Icon(
                         modifier = Modifier.size(35.dp),
                         imageVector = Icons.Outlined.Notifications,
-                        contentDescription = null)
+                        contentDescription = null
+                    )
                 }
             }
         }
-
-
 
 }
 
@@ -603,16 +599,6 @@ fun TopAppBarWithBackButton(
                     fontWeight = FontWeight.Bold
                 )
             }
-//            if (isHome) {
-//                Text(text = "Farmer's Diary") // Home title
-//            } else {
-//                Box(
-//                    modifier = Modifier.fillMaxWidth(),
-//                    contentAlignment = Alignment.Center
-//                ) {
-//                    Text(text = title) // Title in the center for other screens
-//                }
-//            }
         },
         navigationIcon = {
             if (!isHome){

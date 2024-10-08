@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FarmDiary</string>
+    <string name="title_activity_app_route">AppRouteActivity</string>
 </resources>

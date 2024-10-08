@@ -5,6 +5,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
 import com.example.farmdiary.farmDiary.presentation.screen.LoginRegisterScreen
+import com.example.farmdiary.farmDiary.presentation.screen.StartApp
 
 //import com.example.farmdiary.farmDiary.presentation.screen.LogInScreen
 //import com.example.farmdiary.farmDiary.presentation.screen.SignUp
@@ -18,9 +19,5 @@ fun NavGraphBuilder.authGraph(navController: NavController){
         composable(route = Screens.ScreenLoginRoute.route){
             LoginRegisterScreen(navController = navController)
         }
-//
-//        composable(route = Screens.ScreenSignUpRoute.route){
-//            SignUp(navController = navController)
-//        }
     }
 }

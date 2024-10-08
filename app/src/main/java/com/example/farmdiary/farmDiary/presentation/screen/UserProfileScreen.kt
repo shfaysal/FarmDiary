@@ -117,8 +117,6 @@ fun ProfilePhoto(){
                 text = "codingsing.com|+0123242",
                 fontSize = 12.sp,
             )
-
-
         }
     }
 }
